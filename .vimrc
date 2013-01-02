@@ -1,6 +1,13 @@
 "--- .vimrc
-"--- Requires: Pathogen, vim-fugitive, vim-volors-solarized, vim-arduino
-"----
+"--- Requires: 
+"----   Pathogen, 
+"       vim-fugitive, 
+"       vim-volors-solarized, 
+"       vim-arduino
+"---    Powerline (http://lokaltog.github.com/powerline)
+"----       Used Ubuntu Mono font for Powerline.
+"
+set nocompatible
 
 set t_Co=256
 
@@ -39,4 +46,7 @@ au BufRead,BufNewFile *.ino set filetype=arduino
 
 "---- Other config ----------------
 let mapleader = ","
+
+"---- Set status line
+python from powerline.ext.vim import source_plugin; source_plugin()
 
