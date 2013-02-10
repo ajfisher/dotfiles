@@ -1,11 +1,11 @@
 "--- .vimrc
 "--- Requires: 
-"----   Pathogen, 
-"       vim-fugitive, 
-"       vim-volors-solarized, 
+"----   Pathogen, https://github.com/tpope/vim-pathogen
+"       vim-fugitive, https://github.com/tpope/vim-fugitive
+"       vim-colors-solarized, https://github.com/altercation/vim-colors-solarized
 "       vim-arduino
 "---    Powerline (http://lokaltog.github.com/powerline)
-"----       Used Ubuntu Mono font for Powerline.
+"----       Used Ubuntu Mono font for Powerline. (added to repo)
 "
 set nocompatible
 
