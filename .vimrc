@@ -35,6 +35,7 @@ set showtabline=2
 set cursorline
 set smarttab
 set colorcolumn=80 " puts line at 80 char
+set pastetoggle=<F2>
 
 "--------Cold folding --------------------
 set foldmethod=indent
