@@ -2,7 +2,7 @@
 "--- Requires: 
 "----   Pathogen, 
 "       vim-fugitive, 
-"       vim-volors-solarized, 
+"       vim-colors-solarized, 
 "       vim-arduino
 "---    Powerline (http://lokaltog.github.com/powerline)
 "----       Used Ubuntu Mono font for Powerline.
@@ -47,6 +47,9 @@ au BufRead,BufNewFile *.ino set filetype=arduino
 "---- Other config ----------------
 let mapleader = ","
 
-"---- Set status line
-python from powerline.ext.vim import source_plugin; source_plugin()
+let os = substitute(system('uname'), "\n", "", "")
 
+"---- Set status line
+if os == "Linux"
+    python from powerline.ext.vim import source_plugin; source_plugin()
+endif
