@@ -1,11 +1,12 @@
 "--- .vimrc
 "--- Requires: 
 "----   Pathogen, 
-"       vim-fugitive, 
-"       vim-colors-solarized, 
+"----   Pathogen, https://github.com/tpope/vim-pathogen
+"       vim-fugitive, https://github.com/tpope/vim-fugitive
+"       vim-colors-solarized, https://github.com/altercation/vim-colors-solarized
 "       vim-arduino
 "---    Powerline (http://lokaltog.github.com/powerline)
-"----       Used Ubuntu Mono font for Powerline.
+"----       Used Ubuntu Mono font for Powerline. (added to repo)
 "
 set nocompatible
 
@@ -35,6 +36,7 @@ set showtabline=2
 set cursorline
 set smarttab
 set colorcolumn=80 " puts line at 80 char
+set pastetoggle=<F2>
 
 "--------Cold folding --------------------
 set foldmethod=indent
