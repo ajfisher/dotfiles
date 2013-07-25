@@ -1,10 +1,6 @@
 "--- .vimrc
-"--- Requires: 
-"----   Pathogen, 
-"----   Pathogen, https://github.com/tpope/vim-pathogen
-"       vim-fugitive, https://github.com/tpope/vim-fugitive
-"       vim-colors-solarized, https://github.com/altercation/vim-colors-solarized
-"       vim-arduino
+"--- Requires:
+"----   Vundle (https://github.com/gmarik/vundle)
 "---    Powerline (http://lokaltog.github.com/powerline)
 "----       Used Ubuntu Mono font for Powerline. (added to repo)
 "
@@ -12,12 +8,7 @@ set nocompatible
 
 set t_Co=256
 
-call pathogen#infect()
-call pathogen#helptags()
-
 syntax on
-colorscheme solarized
-set background=dark
 
 filetype plugin indent on
 
@@ -42,16 +33,51 @@ set pastetoggle=<F2>
 set foldmethod=indent
 set foldlevel=99
 
-"---- Add custom syntax handling
-au BufRead,BufNewFile *.pde set filetype=arduino
-au BufRead,BufNewFile *.ino set filetype=arduino
 
 "---- Other config ----------------
 let mapleader = ","
 
 let os = substitute(system('uname'), "\n", "", "")
 
-"---- Set status line
+"----   Set up all the vundle stuff
+filetype off " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" Install relevant bundles.
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/powerline'
+Bundle 'altercation/vim-colors-solarized'
+
+filetype plugin indent on     " required!
+
+"----   Other config
+
+"----   Solarized
+colorscheme solarized
+set background=dark
+
+"---- Add custom syntax handling
+au BufRead,BufNewFile *.pde set filetype=arduino
+au BufRead,BufNewFile *.ino set filetype=arduino
+
+
+"---- Powerline -------------------------------------------------------
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+let g:Powerline_symbols = 'fancy'
+
+set noshowmode "-- remove the bottom insert thingy
+
+"---- Set status line // this may no longer be relevant - needs testing
 if os == "Linux"
     python from powerline.ext.vim import source_plugin; source_plugin()
 endif
+
+
+
+
+
