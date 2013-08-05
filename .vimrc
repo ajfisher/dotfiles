@@ -50,7 +50,7 @@ Bundle 'gmarik/vundle'
 
 " Install relevant bundles.
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/powerline'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on     " required!
@@ -73,9 +73,9 @@ let g:Powerline_symbols = 'fancy'
 set noshowmode "-- remove the bottom insert thingy
 
 "---- Set status line // this may no longer be relevant - needs testing
-if os == "Linux"
-    python from powerline.ext.vim import source_plugin; source_plugin()
-endif
+"--if os == "Linux"
+"--    python from powerline.ext.vim import source_plugin; source_plugin()
+"--endif
 
 
 
