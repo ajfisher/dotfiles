@@ -3,6 +3,8 @@
 "----   Vundle (https://github.com/gmarik/vundle)
 "---    Powerline (http://lokaltog.github.com/powerline)
 "----       Used Ubuntu Mono font for Powerline. (added to repo)
+"----       Used Patched monaco font for Mac
+"----          https://gist.github.com/baopham/1838072
 "
 set nocompatible
 
@@ -58,10 +60,6 @@ filetype plugin indent on     " required!
 
 "----   Other config
 
-"----   Solarized
-colorscheme solarized
-set background=dark
-
 "---- Add custom syntax handling
 au BufRead,BufNewFile *.pde set filetype=arduino
 au BufRead,BufNewFile *.ino set filetype=arduino
@@ -70,15 +68,14 @@ au BufRead,BufNewFile *.ino set filetype=arduino
 "---- Powerline -------------------------------------------------------
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:Powerline_symbols = 'fancy'
-"-- let g:Powerline_theme = 'solarized256'
 let g:Powerline_colorscheme = 'solarized256'
+
+"----   Solarized
+colorscheme solarized
+set background=dark
 
 set noshowmode "-- remove the bottom insert thingy
 
-"---- Set status line // this may no longer be relevant - needs testing
-"--if os == "Linux"
-"--    python from powerline.ext.vim import source_plugin; source_plugin()
-"--endif
 
 
 
