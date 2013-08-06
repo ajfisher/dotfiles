@@ -28,6 +28,7 @@ set cursorline
 set smarttab
 set colorcolumn=80 " puts line at 80 char
 set pastetoggle=<F2>
+set bs=indent,eol,start "-- Backspace over everything in insert mode
 
 "--------Cold folding --------------------
 set foldmethod=indent
@@ -69,6 +70,8 @@ au BufRead,BufNewFile *.ino set filetype=arduino
 "---- Powerline -------------------------------------------------------
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:Powerline_symbols = 'fancy'
+"-- let g:Powerline_theme = 'solarized256'
+let g:Powerline_colorscheme = 'solarized256'
 
 set noshowmode "-- remove the bottom insert thingy
 
