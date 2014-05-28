@@ -45,16 +45,18 @@ let os = substitute(system('uname'), "\n", "", "")
 "----   Set up all the vundle stuff
 filetype off " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Install relevant bundles.
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'altercation/vim-colors-solarized'
+
+call vundle#end()
 
 filetype plugin indent on     " required!
 
