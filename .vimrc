@@ -53,7 +53,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Install relevant bundles.
 Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/vim-powerline'
+Plugin 'Lokaltog/powerline'
 Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
