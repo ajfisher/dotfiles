@@ -1,5 +1,7 @@
 node_modules
 *.pyc
-*.swp
-*.swo
+*.sw*
+*.s*
+!*.svg
+.svg
 .DS_Store

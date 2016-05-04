@@ -6,7 +6,8 @@
 "----       Used Patched monaco font for Mac
 "----          https://gist.github.com/baopham/1838072
 "
-set nocompatible
+set nocompatible    
+
 
 set t_Co=256
 
@@ -55,6 +56,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'ntpeters/vim-better-whitespace'
 
 call vundle#end()
 
@@ -66,7 +68,6 @@ filetype plugin indent on     " required!
 au BufRead,BufNewFile *.pde set filetype=arduino
 au BufRead,BufNewFile *.ino set filetype=arduino
 
-
 "---- Powerline -------------------------------------------------------
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:Powerline_symbols = 'fancy'
@@ -75,6 +76,8 @@ let g:Powerline_colorscheme = 'solarized256'
 "----   Solarized
 colorscheme solarized
 set background=dark
+
+highlight CursorLineNr ctermfg=red cterm=bold
 
 set noshowmode "-- remove the bottom insert thingy
 
