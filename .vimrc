@@ -54,7 +54,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Install relevant bundles.
 Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/powerline'
+" Plugin 'Lokaltog/powerline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ntpeters/vim-better-whitespace'
 
@@ -69,7 +69,8 @@ au BufRead,BufNewFile *.pde set filetype=arduino
 au BufRead,BufNewFile *.ino set filetype=arduino
 
 "---- Powerline -------------------------------------------------------
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+"set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'solarized256'
 
