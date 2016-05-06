@@ -16,6 +16,29 @@ If this is the case then the .bash_profile and .vimrc files should just work
 ln -s ~/.config/powerline ~/config/powerline
 ```
 
+## Homebrew
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+Then install default packages
+
+```
+brew install bash socat wget bash-completion python coreutils
+```
+
+Now instlal things that depend on python
+
+```
+brew install nvm vim
+```
+
+### Cask things
+
+```
+brew cask install firefox google-chrome iterm2 slack spotify
+```
 
 ## Solarized:
 
