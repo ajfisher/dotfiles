@@ -68,6 +68,9 @@ filetype plugin indent on     " required!
 au BufRead,BufNewFile *.pde set filetype=arduino
 au BufRead,BufNewFile *.ino set filetype=arduino
 
+"---- YAML and in particular sls handling
+au BufNewFile,BufRead *.yaml,*.yml,*.sls so ~/.vim/vim_extras/yaml.vim
+
 "---- Powerline -------------------------------------------------------
 "set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
