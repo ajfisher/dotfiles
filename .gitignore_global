@@ -2,6 +2,10 @@ node_modules
 *.pyc
 *.sw*
 *.s*
+*.pky
+!*.s*.*
+*.sls.s*
 !*.svg
+!*.sls
 .svg
 .DS_Store
